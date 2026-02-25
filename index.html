@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crisis Response: Hall Director Edition</title>
+<title>Crisis Response Game</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -692,11 +692,11 @@ const SCENARIOS = [
     text: "It's 1:30 AM on a Tuesday. You receive a call from a resident's roommate saying their roommate has been crying for hours, won't come out of the bathroom, and recently texted something that sounded like a goodbye message.",
     roles: [{ label: "Resident", desc: "Distressed student" }, { label: "Roommate", desc: "Concerned caller" }, { label: "HD", desc: "Crisis responder" }],
     debrief: [
-      "🏛️ Safety First (M Housing Pillar): The handbook states that ensuring 'the physical and emotional safety of our residents' is 'at the center of what we do.' Call DPSS immediately when appropriate — do not try to manage a safety crisis alone.",
-      "📋 Know Your Role & Escalate: The handbook says to 'recognize when you are not the right person for a task' and to 'inform a supervisor, appropriate M Housing department, or on-campus reporting unit.' Contact your supervisor and campus counseling right away.",
-      "🤝 Compassion as a Core Value: Student Life's core values call on us to 'care for others through our words and actions and interact with compassion and empathy.' Stay present, calm, and non-judgmental — your demeanor directly impacts the resident's response.",
-      "📝 Document and Report: The handbook requires staff to 'keep accurate, up-to-date records of incidents, meetings, and communications.' Document everything and communicate proactively to your supervisor without waiting to be prompted.",
-      "🌱 Restorative Follow-Up: The handbook's Restorative Practices philosophy asks staff to 'acknowledge harm and actively engage in efforts to restore and heal shared connections.' Follow up the next day and connect the resident to ongoing mental health resources."
+      "Safety First: The handbook states that ensuring 'the physical and emotional safety of our residents' is 'at the center of what we do.' Call DPSS immediately — DPSS is the handbook's named campus emergency contact. Do not try to manage a safety crisis alone.",
+      "Escalate in the Right Order: The handbook says to 'recognize when you are not the right person for a task' and to 'inform a supervisor, appropriate M Housing department, or on-campus reporting unit.' After calling DPSS, your supervisor is the next call — not an afterthought.",
+      "Compassion as a Core Value: Student Life's core values call on staff to 'care for others through words and actions and interact with compassion and empathy.' Stay present, calm, and non-judgmental — your demeanor directly shapes the resident's response in a moment like this.",
+      "Document and Report Proactively: The handbook requires 'accurate, up-to-date records of incidents, meetings, and communications' and expects staff to 'communicate clearly and proactively on progress with your supervisor without having to be prompted.' Do not wait to be asked.",
+      "Restorative Follow-Up: The handbook's Restorative Practices philosophy asks staff to 'acknowledge harm and actively engage in efforts to restore and heal shared connections.' Follow up the next day and connect the resident to ongoing mental health resources."
     ]
   },
   {
@@ -708,11 +708,11 @@ const SCENARIOS = [
     text: "It's a Friday night. A group of students knocks on your door in a panic — their friend drank too much at a party and is now barely conscious, mumbling incoherently, and vomited twice. They're afraid to call for help because of the alcohol policy.",
     roles: [{ label: "Intoxicated Resident", desc: "Barely conscious" }, { label: "Friends (2)", desc: "Scared, covering" }, { label: "HD", desc: "On-call responder" }],
     debrief: [
-      "🏛️ Safety is the Core Pillar: The handbook is explicit — 'call DPSS immediately when appropriate.' In a medical emergency, that call cannot wait. Resident physical safety is always the top priority above any policy concern.",
-      "📋 Comply with Legal Reporting Obligations: The handbook lists 'complying with all legal reporting obligations' as a core safety action. Medical emergencies carry mandatory response duties regardless of surrounding policy violations.",
-      "🤝 Resident-Centered Practice: The handbook says to place 'the needs, experiences and success of residents at the forefront.' Reassure the friend group — their instinct to seek help was right — and guide them toward future help-seeking behavior.",
-      "📝 Thorough Documentation: The handbook requires staff to 'keep accurate, up-to-date records of incidents.' Document what was consumed, when, physical symptoms, who was present, and every action taken. This protects everyone.",
-      "🌱 Address the Underlying Fear: The handbook calls for 'student intervention, support and advocacy' and helping students 'navigate complex problems.' Debrief with the friend group after — fear of getting in trouble should never outweigh getting help."
+      "Safety is the Core Pillar: The handbook is explicit — 'call DPSS immediately when appropriate.' DPSS is the named campus emergency contact. In a medical emergency that call cannot wait, and it takes priority over any policy concern.",
+      "Comply with Legal Reporting Obligations: The handbook lists 'complying with all legal reporting obligations' as a core safety action. Medical emergencies carry mandatory response duties regardless of what else is happening around them.",
+      "Resident-Centered Practice: The handbook says staff should strive for 'engagement vs transactional interactions' and place residents' needs at the forefront. Reassure the friend group — their instinct to seek help was right — and guide them toward future help-seeking behavior.",
+      "Thorough Documentation: The handbook requires 'accurate, up-to-date records of incidents.' Document what was consumed, when, what symptoms were present, who was there, and every action taken. This record protects the student, you, and the process.",
+      "Address the Underlying Fear: The handbook's Student Intervention, Support and Advocacy core work calls for helping students 'navigate and address complex problems.' Debrief with the friend group after — fear of policy consequences should never stop someone from calling for help."
     ]
   },
   {
@@ -721,14 +721,14 @@ const SCENARIOS = [
     icon: "⚠️",
     difficulty: 2,
     title: "Roommate Fight",
-    text: "You hear shouting and a loud crash from a room on your floor. When you knock, a resident opens the door with a bloody nose. Behind him, his roommate is sitting on the bed looking shaken. Both are breathing hard and there's a broken lamp on the floor.",
+    text: "You hear shouting and a loud crash from a room on your floor. When you knock, a resident opens the door with a bloody nose. Behind him, his roommate is sitting on the bed looking shaken. Both are breathing hard and there's a broken lamp on the floor. You'll need to file an incident report before the night is over.",
     roles: [{ label: "Injured Resident", desc: "Bloody nose, defensive" }, { label: "Roommate", desc: "Shaken, refuses to talk" }, { label: "HD", desc: "First responder on scene" }],
     debrief: [
-      "🏛️ Know When to Call DPSS: The handbook states staff should call DPSS 'immediately when appropriate' and recognize when their involvement alone is not appropriate. A physical altercation with injury meets that bar — don't go in without backup if it feels unsafe.",
-      "📋 Prioritize Physical Safety: The handbook calls for 'maintaining physical spaces that are safe and hazard-free' and 'promptly reporting any safety or security concerns.' Address the injury first, then separate the parties — medical need comes before mediation.",
-      "🤝 Apply Restorative Values: The handbook asks staff to model 'empathy, respect and active listening.' Approach both residents without taking sides; each deserves to feel heard. The immediate goal is de-escalation, not adjudication.",
-      "📝 Document Everything Immediately: Per the handbook's expectation for 'accurate, up-to-date records of incidents,' document the physical environment, visible injuries, statements made, and actions taken — all details matter for follow-up conduct processes.",
-      "🌱 Recognize the Bigger Picture: The handbook's 'Accountability → Own it, Learn from it, Fix it' framework applies to residents too. Use restorative practices in follow-up to help both residents understand the impact of their actions on the community."
+      "Know When to Call DPSS: The handbook states staff should 'call DPSS immediately when appropriate' and 'recognize when you are not the right person for a task.' A physical altercation with a visible injury meets that bar — do not enter alone if the situation still feels volatile.",
+      "Address the Injury First: The handbook calls for 'maintaining physical spaces that are safe and hazard-free' and 'promptly reporting any safety or security concerns.' Medical need comes before mediation — address the injury, then separate the parties.",
+      "Apply Restorative Values: The handbook asks staff to model 'empathy, respect and active listening' when interacting with students. Approach both residents without taking sides. The immediate goal is de-escalation, not figuring out who is right.",
+      "Document Everything Immediately: The handbook requires 'accurate, up-to-date records of incidents' kept in 'organized digital files accessible to supervisors and ResEd Leadership.' Document the scene, visible injuries, statements made, and every action taken — this feeds directly into the conduct process.",
+      "Use Restorative Practices in Follow-Up: The handbook's Personal Accountability section describes the 'Own it, Learn from it, Fix it' framework. This applies to residents too. Follow-up conversations using restorative practices help both residents understand the impact of their actions on the community."
     ]
   },
   {
@@ -740,11 +740,11 @@ const SCENARIOS = [
     text: "The fire alarm sounds at 3 AM. You begin evacuating the floor when a resident runs back in, saying they left their diabetic medication in the room and they need it urgently. Other students are milling around instead of evacuating.",
     roles: [{ label: "Diabetic Resident", desc: "Panicked, going back in" }, { label: "Slow-moving Residents", desc: "Confused, non-compliant" }, { label: "HD", desc: "Evacuation lead" }],
     debrief: [
-      "🏛️ Safety is Non-Negotiable: The handbook places 'safety and security of residents' as the first pillar of M Housing work. No one re-enters the building during an active alarm — this is a life safety rule that supersedes all individual needs in the moment.",
-      "📋 Recognize the Limits of Your Role: The handbook says to 'recognize when you are not the right person for a task.' You cannot retrieve the medication yourself — but you can advocate with on-scene emergency personnel who have the authority to do so safely.",
-      "🤝 Compassion Without Compromise: The handbook calls for compassion 'through our words and actions.' Acknowledge the resident's distress genuinely — their fear is valid — while firmly holding the evacuation expectation. Both can be true.",
-      "📝 Account for All Residents: The handbook expects staff to be 'detail-oriented' and prepared. Know your residents, have a roster accessible, and check in every person at the meeting point. This is also the moment where accommodations for medically complex residents should already be on file.",
-      "🌱 Proactive Planning is a Professional Expectation: The handbook calls for staff to 'anticipate potential challenges and prepare contingencies.' Medical accommodation plans for residents with chronic conditions should be coordinated with housing before a crisis happens."
+      "Safety is Non-Negotiable: The handbook places 'safety and security of residents' as the first pillar of M Housing work. No one re-enters the building during an active alarm — this is a life safety rule. Contact DPSS on-scene; they have the authority to retrieve critical medical items safely.",
+      "Recognize the Limits of Your Role: The handbook says to 'recognize when you are not the right person for a task.' You cannot retrieve the medication yourself, but you can clearly communicate the resident's medical need to emergency responders who can.",
+      "Compassion Without Compromise: The handbook calls for compassion 'through our words and actions.' Acknowledge the resident's distress genuinely while firmly holding the evacuation expectation. Care and accountability must coexist.",
+      "Account for Every Resident: The handbook expects staff to conduct 'weekly community walks' and maintain presence in the community precisely so they know their residents. That relationship is what allows you to account for everyone at the meeting point — use your roster.",
+      "Proactive Planning is a Professional Expectation: Under Administration and Organizational Skills, the handbook calls for staff to 'anticipate potential challenges and prepare contingencies.' Medical accommodation plans for residents with chronic conditions should already exist before an emergency happens."
     ]
   },
   {
@@ -753,14 +753,14 @@ const SCENARIOS = [
     icon: "🧠",
     difficulty: 2,
     title: "The Threatening Post",
-    text: "A resident DMs you a screenshot from a floor groupchat. Another student posted a cryptic message saying 'Everyone will regret how they treated me — watch what happens Friday.' Several residents are scared. It's currently Wednesday evening.",
-    roles: [{ label: "Concerning Student", desc: "Withdrawn, won't answer door" }, { label: "Reporting Resident", desc: "Scared, wants action" }, { label: "HD", desc: "Must triage & escalate" }],
+    text: "A resident DMs you a screenshot from the floor's Google Space. Another student posted a cryptic message saying 'Everyone will regret how they treated me — watch what happens Friday.' Several residents are scared. It's currently Wednesday evening.",
+    roles: [{ label: "Concerning Student", desc: "Withdrawn, won't answer door" }, { label: "Reporting Resident", desc: "Scared, wants action" }, { label: "HD", desc: "Must triage and escalate" }],
     debrief: [
-      "🏛️ Promptly Report Safety Concerns: The handbook is clear — staff must 'promptly report any safety or security concerns' and 'call DPSS immediately when appropriate.' A credible threat requires immediate escalation to your supervisor and DPSS. Do not wait.",
-      "📋 Know Your Reporting Obligations: The handbook requires staff to 'comply with all legal reporting obligations' and to 'become familiar with university policies including FERPA, Title IX and VI, and codes of conduct.' A threat like this may trigger mandatory reporting duties.",
-      "🤝 Recognize the Limits of Your Role: The handbook says to 'recognize when you are not the right person for a task.' Do not confront the student alone — involve DPSS, your supervisor, and potentially a campus threat assessment team. Acting solo puts everyone at risk.",
-      "📝 Preserve Evidence and Document: Per the handbook's documentation expectations, preserve the exact content and timestamp of the post. Forward it through appropriate channels. 'Accurate, up-to-date records' are critical if this escalates.",
-      "🌱 Support the Reporting Resident Too: The handbook's Belonging pillar asks staff to ensure 'every individual feels supported and connected.' Acknowledge the courage it took to report, reassure the resident their safety is being prioritized, and follow up on their wellbeing."
+      "Promptly Report Safety Concerns: The handbook is clear — staff must 'promptly report any safety or security concerns' and 'call DPSS immediately when appropriate.' A credible threat requires immediate escalation to your supervisor and DPSS. Do not wait until morning.",
+      "Know Your Reporting Obligations: The handbook requires staff to 'comply with all legal reporting obligations' and to 'become familiar with university policies including FERPA, Title IX and VI, and codes of conduct.' A threatening post may trigger mandatory reporting duties — consult your supervisor.",
+      "Recognize the Limits of Your Role: The handbook says to 'recognize when you are not the right person for a task.' Do not confront the student alone. Involve DPSS, your supervisor, and potentially a campus threat assessment team — acting solo puts everyone at risk.",
+      "Preserve Evidence and Document: The handbook requires 'organized digital files accessible to supervisors and ResEd Leadership.' Screenshot the post with its timestamp, document when you received it, who you contacted, and what steps were taken. This record matters if the situation escalates.",
+      "Support the Reporting Resident Too: The handbook's Belonging philosophy is dedicated to ensuring 'every individual feels supported and connected.' Acknowledge the courage it took to come forward, reassure the resident their safety is being prioritized, and follow up on their wellbeing."
     ]
   },
   {
@@ -772,11 +772,11 @@ const SCENARIOS = [
     text: "A resident stops you in the hallway, clearly jittery, with dilated pupils. They tell you a friend on the floor has been selling their ADHD medication to pay rent, and now several residents are using it to study for finals.",
     roles: [{ label: "Informing Resident", desc: "Nervous, asking for confidentiality" }, { label: "HD", desc: "Must navigate disclosure carefully" }],
     debrief: [
-      "🏛️ Safety Over Confidentiality: The handbook states staff must 'understand when confidentiality must be maintained and when issues — such as harassment, discrimination, or safety concerns — must be reported per university policy.' Drug distribution and health risk fall into the must-report category.",
-      "📋 Comply with Reporting Obligations: The handbook requires staff to 'report potential violations or concerns using the appropriate university channels.' This situation involves both a conduct violation and a health & safety risk — your supervisor and the student conduct office need to know.",
-      "🤝 Honor Confidentiality Within Its Limits: The handbook says to 'handle sensitive student information discreetly and in accordance with privacy requirements.' Explain honestly to the resident that you must act, but that you will be thoughtful and discrete in how you proceed.",
-      "📝 Document the Disclosure: The handbook's record-keeping expectations apply here — document what you were told, by whom, when, and what you observed. Note the physical signs of current use you witnessed. This protects the student, you, and the process.",
-      "🌱 Address the Root Cause: The handbook calls for 'student intervention, support and advocacy' to help students 'navigate complex problems.' Refer both students to academic support, counseling, and financial aid resources — finals pressure is a community-wide stressor worth addressing proactively."
+      "Safety Over Confidentiality: The handbook states staff must 'understand when confidentiality must be maintained and when issues — such as safety concerns — must be reported per university policy.' Drug distribution is a health and safety issue. It must be reported regardless of the resident's request.",
+      "Comply with Reporting Obligations: The handbook requires staff to 'report potential violations or concerns using the appropriate university channels.' This situation involves both a violation of CLAM standards — the agreement every resident signs — and a real health risk. Your supervisor and the conduct office need to know.",
+      "Honor Confidentiality Within Its Limits: The handbook says to 'handle sensitive student information discreetly and in accordance with privacy requirements.' Explain honestly to the resident that you must act on what you've heard, but that you will be thoughtful and discreet about how you proceed.",
+      "Document the Disclosure: The handbook's record-keeping expectations apply fully here — document what you were told, by whom, when, and what you personally observed. Physical signs of current use you witnessed firsthand are part of that record.",
+      "Address the Root Cause: The handbook calls for staff to 'facilitate educational opportunities' and connect students to resources. Use Sessions@Michigan to track any programming follow-up. Refer both students to academic support, counseling, and financial aid — finals pressure is a community-wide stressor worth responding to proactively."
     ]
   },
 
@@ -787,14 +787,14 @@ const SCENARIOS = [
     icon: "🧠",
     difficulty: 2,
     title: "Eating Disorder Disclosure",
-    text: "During a routine one-on-one check-in, an RA mentions they're worried about a resident on their floor. The resident has been skipping all meals at the dining hall for two weeks, looks noticeably thinner, and told the RA they 'just don't feel hungry anymore.' The RA seems unsure whether to escalate.",
+    text: "During your weekly one-on-one with an RA, they mention being worried about a resident on their floor. The resident has been skipping all dining hall meals for two weeks, looks noticeably thinner, and told the RA they 'just don't feel hungry anymore.' The RA seems unsure whether to escalate.",
     roles: [{ label: "RA", desc: "Worried but uncertain" }, { label: "HD", desc: "Supervisor and guide" }],
     debrief: [
-      "🏛️ Health & Well-Being is Core Work: The handbook lists 'Health and Well-Being Care and Education' as a pillar of Student Life's core work — providing care for students' physical and mental health is central to the role, not peripheral to it.",
-      "📋 Guide Your RA to the Right Resources: The handbook says to 'encourage student professional growth, and know when to refer students to appropriate resources.' Coach the RA on how to have a caring check-in with the resident and connect them to campus health services.",
-      "🤝 Compassion Without Overstepping: The handbook calls for engaging 'with everyone through genuine care, empathy and reflection.' Neither the RA nor you should diagnose or confront — the goal is a warm, non-judgmental connection to support.",
-      "📝 Document Concerns Appropriately: Per the handbook's record-keeping expectations, document the RA's observations with dates. If the resident's wellbeing continues to decline, this record will be essential for escalating to health professionals.",
-      "🌱 Support the RA Too: The handbook says staff should 'provide constructive, respectful, and timely feedback, guidance, and coaching.' Your RA is doing the right thing by coming to you. Acknowledge that, and make sure they feel supported in this difficult situation."
+      "Health and Well-Being is Core Work: The handbook lists 'Health and Well-Being Care and Education' as a pillar of Student Life's core work — providing care for students' physical and mental health is a central responsibility, not a peripheral one.",
+      "Use the One-on-One as a Coaching Space: The handbook says staff should 'prioritize one-on-one meetings with supervisees' and use them to provide 'constructive, respectful, and timely feedback, guidance, and coaching.' This is exactly the moment that one-on-one was built for — coach the RA on how to respond.",
+      "Compassion Without Overstepping: The handbook calls for engaging 'with everyone through genuine care, empathy and reflection.' Neither you nor the RA should diagnose or confront the resident directly. The goal is a warm, non-judgmental connection to campus support resources.",
+      "Document the Concern: The handbook requires 'accurate, up-to-date records.' Document the RA's observations with dates. If the resident's wellbeing continues to decline, this record is essential for escalating through the appropriate channels.",
+      "Support the RA Too: The handbook says staff should 'provide constructive, respectful, and timely feedback, guidance, and coaching' to student staff. Your RA did exactly the right thing by bringing this to you. Acknowledge that, and make sure they feel supported — this is hard work."
     ]
   },
 
@@ -805,14 +805,14 @@ const SCENARIOS = [
     icon: "⚠️",
     difficulty: 3,
     title: "Hallway Confrontation",
-    text: "You're doing your weekly community walk at 10 PM when you witness two residents from different floors squaring off in the hallway. One is pointing aggressively while the other is backed against a wall. A group of onlookers has gathered. Neither has thrown a punch yet.",
+    text: "You're on your weekly community walk at 10 PM when you witness two residents squaring off in the hallway. One is pointing aggressively while the other is backed against a wall. A group of onlookers has gathered and several are recording on their phones. No punches have been thrown yet.",
     roles: [{ label: "Aggressor", desc: "Escalating, won't back down" }, { label: "Cornered Resident", desc: "Scared, defensive" }, { label: "Bystanders", desc: "Recording on phones" }, { label: "HD", desc: "On the scene" }],
     debrief: [
-      "🏛️ Be Present and Act: The handbook says 'staff and residents notice if you are present' and stresses the importance of weekly community walks for exactly this reason — you being there matters. Do not walk away; de-escalate calmly and call for backup.",
-      "📋 Know When to Call DPSS: The handbook instructs staff to 'call DPSS immediately when appropriate.' A physical confrontation that hasn't yet escalated is still the right moment — don't wait for a punch to be thrown before calling for support.",
-      "🤝 De-escalate With Empathy: The handbook's core value of Compassion asks staff to 'care for others through words and actions.' Speak calmly, address both individuals by name if possible, and direct onlookers to leave — an audience escalates tension.",
-      "📝 Document What You Witnessed: You are an eyewitness. The handbook's record-keeping expectations apply — document the time, what you observed, who was involved, what was said, and the outcome. Your account may be needed in a conduct process.",
-      "🌱 Follow Up on Both Residents: The handbook's Belonging philosophy asks staff to ensure every resident feels supported. Check in on both individuals separately after the incident — the cornered resident in particular may need support processing the experience."
+      "Being Present Is What Makes This Possible: The handbook says 'staff and residents notice if you are present' and names weekly community walks as a specific visibility expectation. You are only in this hallway because you were doing your job — that presence is not incidental, it is the work.",
+      "Call DPSS: The handbook instructs staff to 'call DPSS immediately when appropriate.' A physical confrontation that hasn't yet escalated is still the right moment to call — do not wait for a punch to justify asking for support.",
+      "De-escalate, Then Clear the Audience: The handbook's Compassion value asks staff to 'care for others through words and actions.' Speak calmly and address both individuals directly. Then deal with the onlookers — the handbook calls for 'enabling everyone to actively engage in the residential community,' and a phone-recording crowd does the opposite.",
+      "Document What You Witnessed: You are an eyewitness. The handbook's record-keeping expectations are clear — document the time, what you observed, who was involved, what was said, and the outcome. Your firsthand account may be needed in a conduct process.",
+      "Follow Up on Both Residents: The handbook's Belonging philosophy asks staff to ensure every resident feels supported. Check in with both individuals separately after the incident — especially the resident who was cornered. They may need support processing the experience."
     ]
   },
 
@@ -823,14 +823,14 @@ const SCENARIOS = [
     icon: "📜",
     difficulty: 1,
     title: "Noise Complaint Spiral",
-    text: "You've received three noise complaints in one night about the same room — a group of residents hosting a loud party at 1 AM on a Wednesday. When you knock, the residents are dismissive and one says 'We pay to live here, you can't tell us what to do.' Other residents on the floor are visibly frustrated.",
+    text: "You've received three noise complaints in one night about the same room — a group hosting a loud gathering at 1 AM on a Wednesday. When you knock, the residents are dismissive and one says 'We pay to live here, you can't tell us what to do.' Other residents on the floor are visibly frustrated.",
     roles: [{ label: "Party Host", desc: "Dismissive, argumentative" }, { label: "Complaining Neighbor", desc: "Exhausted, fed up" }, { label: "HD", desc: "Enforcing community standards" }],
     debrief: [
-      "🏛️ Uphold Community Standards: The handbook is clear that residents agree to the Community Living At Michigan (CLAM) standards when signing their housing contract. These are not arbitrary rules — they represent the shared commitment every resident makes to the community.",
-      "📋 Be Consistent in Applying Policy: The handbook says staff should 'be consistent in applying policies, procedures, and expectations.' Apply the same standard regardless of who the resident is or how they respond. Inconsistency undermines trust.",
-      "🤝 Balance Care and Accountability: The handbook says to 'respond to student concerns and conflicts in ways that balance care, accountability, and protocol.' Stay calm and professional even if the resident is not — model the behavior you expect.",
-      "📝 Document the Pattern: Three complaints in one night is a pattern. The handbook expects 'accurate, up-to-date records of incidents.' Document each complaint, your response, and the resident's reaction. This is critical if a conduct referral becomes necessary.",
-      "🌱 Empowering Residents as Community Members: The handbook calls for 'empowering residents to take ownership of their actions and the impact they have on the community.' This is a teachable moment — help the resident understand how their choices affect their neighbors."
+      "CLAM Standards Are the Foundation: The handbook states that when residents sign their housing contract, they are agreeing to the Community Living At Michigan (CLAM) standards, which 'provide the backbone of our community philosophies.' These are not arbitrary rules — every resident agreed to them.",
+      "Be Consistent in Applying Policy: The handbook says staff must 'be consistent in applying policies, procedures, and expectations.' Apply the same standard regardless of how the resident responds. Inconsistency undermines trust across the entire community.",
+      "Balance Care and Accountability: The handbook says to 'respond to student concerns and conflicts in ways that balance care, accountability, and protocol.' Maintain a 'positive and professional demeanor' per the Workplace Ethics section — even if the resident does not.",
+      "Document the Pattern: Three complaints in one night is a pattern. The handbook expects 'accurate, up-to-date records of incidents.' Document each complaint, your response, and the resident's reaction. A documented pattern is what enables a formal conduct referral when needed.",
+      "Empower Residents as Community Members: The handbook calls for 'empowering residents to take ownership of their actions and the impact they have on the community.' This is a teachable moment — help the resident understand concretely how their choices are affecting the people around them."
     ]
   },
 
@@ -841,14 +841,14 @@ const SCENARIOS = [
     icon: "🧠",
     difficulty: 3,
     title: "Manic Episode",
-    text: "An RA calls you at 2 AM saying a resident has been awake for three days, is sending 50+ texts per hour to everyone on the floor, rearranged all the lounge furniture into a 'command center,' and told the RA they've discovered they have a 'special mission.' The resident seems euphoric but agitated when questioned.",
+    text: "An RA calls you at 2 AM saying a resident has been awake for three days, is sending dozens of texts per hour to everyone on the floor, rearranged all the lounge furniture into a 'command center,' and told the RA they've discovered a 'special mission.' The resident seems euphoric but escalates quickly when questioned.",
     roles: [{ label: "Resident", desc: "Euphoric, grandiose, escalates quickly" }, { label: "RA", desc: "Scared and out of depth" }, { label: "HD", desc: "On-call responder" }],
     debrief: [
-      "🏛️ This is a Safety Situation — Call DPSS: The handbook instructs staff to 'call DPSS immediately when appropriate' and to 'recognize when you are not the right person for a task.' Signs of a possible manic episode require mental health crisis support beyond what ResEd staff can provide.",
-      "📋 Support Your RA First: The handbook says to 'provide constructive, respectful, and timely feedback, guidance, and coaching' to student staff. Your RA is scared — acknowledge that, give them clear direction on what to do next, and stay connected with them throughout.",
-      "🤝 Do Not Argue With the Resident's Reality: The handbook's Compassion value asks for empathy in action. Challenging or correcting a person experiencing a mental health episode can escalate the situation. Stay calm, validate their feelings, and keep communication simple and non-confrontational.",
-      "📝 Document the Behavioral Timeline: The handbook requires 'accurate, up-to-date records of incidents.' Document when the behavior started, what was observed, who was involved, and every action taken — this information is critical for the mental health professionals responding.",
-      "🌱 Coordinate Ongoing Support: The handbook's core work includes 'Student Intervention, Support & Advocacy.' After the immediate crisis, coordinate with campus counseling and housing to ensure the resident has a continued support plan before returning to the community."
+      "This is a Safety Situation — Call DPSS: The handbook instructs staff to 'call DPSS immediately when appropriate' and to 'recognize when you are not the right person for a task.' Signs of a possible mental health crisis require professional support beyond what ResEd staff can or should provide alone.",
+      "Support Your RA Through the One-on-One Relationship: The handbook says staff should 'provide constructive, respectful, and timely feedback, guidance, and coaching' to student staff. Your RA called you because they trust the supervisory relationship built in one-on-ones. Acknowledge their fear, give them clear next steps, and stay connected.",
+      "Do Not Argue With the Resident's Reality: The handbook's Compassion value asks for empathy in action. Challenging or correcting someone experiencing a mental health episode can escalate the situation fast. Stay calm, keep communication simple, and focus on keeping everyone safe until DPSS arrives.",
+      "Document the Behavioral Timeline: The handbook requires 'accurate, up-to-date records of incidents.' Document when the behavior started, what was observed, who was involved, and every action taken. This information is critical for the mental health professionals responding.",
+      "Coordinate Ongoing Support Through Campus Partners: The handbook specifically names 'Partner Office Hours' as a resource for consulting with campus partners on community concerns. After the immediate crisis, use those channels to coordinate a support plan with campus counseling before the resident returns to the community."
     ]
   },
 
@@ -859,14 +859,14 @@ const SCENARIOS = [
     icon: "📜",
     difficulty: 2,
     title: "Bias Incident Report",
-    text: "A resident of color comes to your office visibly shaken. They found a racist note slipped under their door. They don't want to 'make a big deal of it' and are asking you to just quietly remove the note and move on. Other residents on the floor may have seen it.",
+    text: "A resident of color comes to your office visibly shaken. They found a racist note slipped under their door in a shared community space. They don't want to 'make a big deal of it' and are asking you to just quietly remove the note and move on. Other residents on the floor may have already seen it.",
     roles: [{ label: "Affected Resident", desc: "Shaken, asking for discretion" }, { label: "HD", desc: "Must navigate competing obligations" }],
     debrief: [
-      "🏛️ Reporting Is Required, Not Optional: The handbook requires staff to 'comply with all legal reporting obligations' and 'report potential violations or concerns using appropriate university channels.' A bias incident is a reportable event regardless of the resident's wishes.",
-      "📋 DEI Is a Core Value: Student Life's core values include 'Diversity, Equity, and Inclusion — disrupting patterns of inequity.' Treating this as a quiet internal matter misses the institutional obligation. The bias reporting process exists to protect the resident and the community.",
-      "🤝 Lead With Compassion and Respect Their Agency: The handbook asks for 'genuine care, empathy and reflection' with all residents. Acknowledge that reporting can feel overwhelming. Explain the process, walk them through it with care, and let them know you will be with them throughout.",
-      "📝 Preserve the Evidence: Document everything immediately — the note, when it was found, the resident's account, who may have seen it. Per the handbook, 'accurate, up-to-date records' are essential and the note itself should be preserved through the appropriate reporting channel.",
-      "🌱 Check on the Community: The handbook calls for 'fostering an environment where individuals feel they belong.' After handling the immediate situation, consider how the broader floor community may need support — this incident affects more than one resident."
+      "Reporting Is Required, Not Optional: The handbook requires staff to 'comply with all legal reporting obligations' and 'report potential violations or concerns using appropriate university channels.' A bias incident is a reportable event regardless of the resident's wishes.",
+      "DEI Is a Core Value — and a Named Obligation: Student Life's core values include 'Diversity, Equity, and Inclusion — disrupting patterns of inequity.' The handbook specifically requires staff to 'model ethical and inclusive behavior' and to uphold the University's non-discrimination policy. A quiet removal is not enough.",
+      "Lead With Compassion, Respect Their Agency: The handbook asks for 'genuine care, empathy and reflection — questioning our assumptions and thoughtfully addressing the broader contexts and systemic factors impacting their experiences.' Walk the resident through the process with care. Let them know you will be with them.",
+      "Preserve the Evidence, Document Everything: The handbook requires 'accurate, up-to-date records' kept in 'organized digital files accessible to supervisors and ResEd Leadership.' Document the note, when it was found, the resident's account, and who may have seen it. The note itself must be preserved through the proper reporting channel.",
+      "Use ResEd Updates to Loop in Leadership: After handling the immediate situation, the handbook's ResEd Updates process is the appropriate channel for sharing community-wide concerns with leadership. This incident affects more than one resident — the community needs support too."
     ]
   },
 
@@ -877,14 +877,14 @@ const SCENARIOS = [
     icon: "🚒",
     difficulty: 2,
     title: "Flooding in the Hall",
-    text: "A pipe bursts on the third floor at 11 PM, sending water cascading into two rooms and the hallway. Six residents need to be relocated immediately. Facilities has been called but won't arrive for at least 45 minutes. Residents are upset and some are refusing to leave their belongings.",
+    text: "A pipe bursts on the third floor at 11 PM, sending water cascading into two rooms and the hallway. Six residents need to be relocated immediately and you're coordinating with your supervisor. Facilities has been called but won't arrive for 45 minutes. Residents are upset and some are refusing to leave their belongings.",
     roles: [{ label: "Displaced Resident", desc: "Panicked about belongings" }, { label: "Second Resident", desc: "Demanding answers" }, { label: "HD", desc: "Coordinating relocation" }],
     debrief: [
-      "🏛️ Safety of Physical Spaces is a Core Pillar: The handbook lists 'maintaining physical spaces that are safe and hazard-free' as a key safety action. A flooding hallway is a hazard — prioritize getting residents out of the water-affected area before addressing anything else.",
-      "📋 Communicate Up and Out Immediately: The handbook's communication expectations require staff to convey 'time-sensitive information swiftly to enable timely decision-making.' Notify your supervisor right away, document the situation, and keep Housing leadership in the loop.",
-      "🤝 Customer Service in a Crisis: The handbook defines customer service as 'addressing residents' needs, inquiries, and requests promptly and proactively.' Even in chaos, residents deserve a calm, clear explanation of what is happening and what the plan is.",
-      "📝 Document Damage and Actions Taken: The handbook requires detailed records of incidents. Note which rooms are affected, what belongings may have been damaged, who was relocated and where, and the timeline. This supports insurance processes and Facilities follow-up.",
-      "🌱 Follow Up After the Crisis: The handbook asks staff to 'invest in supporting all residents to develop a sense of belonging.' Displaced residents may feel vulnerable for days. Check in, connect them to resources, and make sure their temporary situation is livable."
+      "Safety of Physical Spaces is a Core Pillar: The handbook lists 'maintaining physical spaces that are safe and hazard-free' as a core safety action. A flooding hallway is a hazard. Get residents out of the affected area first — belongings come second.",
+      "Communicate Up Immediately — Timeliness Matters: The handbook's communication expectations require staff to convey 'time-sensitive information swiftly to enable timely decision-making' and to 'communicate proactively with your supervisor without having to be prompted.' Notify your supervisor immediately and keep Housing leadership in the loop.",
+      "Customer Service Doesn't Stop in a Crisis: The handbook defines customer service as 'assisting residents before, during, and after they move into campus housing' and 'addressing their needs promptly and proactively.' Even in chaos, residents deserve a calm, clear explanation of what is happening and what the plan is.",
+      "Document Damage and Every Action Taken: The handbook requires detailed incident records accessible to supervisors and ResEd Leadership. Note which rooms are affected, what belongings may have been damaged, who was relocated and where, and the full timeline. This supports insurance processes and Facilities follow-up.",
+      "Follow Up After the Crisis: The handbook asks staff to 'invest in supporting all residents to develop a sense of belonging.' Displaced residents may feel unsettled for days. Check in, connect them to resources, and make sure their temporary situation is genuinely livable."
     ]
   },
 
@@ -895,14 +895,14 @@ const SCENARIOS = [
     icon: "📜",
     difficulty: 2,
     title: "Unauthorized Guest Overstay",
-    text: "Two separate residents independently report that a non-student has been living in a resident's room for three weeks, sleeping there every night and using the communal bathrooms and lounges. When you approach the resident about it, they say the person is 'just a friend visiting' and become defensive.",
+    text: "Two separate residents have emailed you to report that a non-student has been living in a resident's room for three weeks, sleeping there every night and using the communal bathrooms and lounges. When you approach the resident about it, they say the person is 'just a friend visiting' and become defensive.",
     roles: [{ label: "Resident (host)", desc: "Defensive, deflecting" }, { label: "Reporting Neighbor", desc: "Uncomfortable, wants resolution" }, { label: "HD", desc: "Enforcing housing policy" }],
     debrief: [
-      "🏛️ Safety Is the Underlying Issue: An unauthorized long-term guest creates safety and security concerns for the community. The handbook's safety pillar includes ensuring residents know who is in their shared spaces. This isn't just a policy technicality — it affects everyone on the floor.",
-      "📋 Be Consistent With Policy: The handbook says to 'be consistent in applying policies, procedures, and expectations.' Guest policies exist in the CLAM standards that every resident agreed to. Review and apply them clearly, without making it personal.",
-      "🤝 Assume Positive Intent, But Hold the Standard: The handbook asks staff to 'assume goodwill' — the resident may genuinely not realize the impact. Lead with curiosity rather than accusation, but be clear that the situation must be resolved.",
-      "📝 Document the Reports and Your Response: Per handbook expectations, document the two independent reports, when and how you addressed it with the resident, and the outcome. If the situation continues, this record supports a formal conduct referral.",
-      "🌱 Engage Restoratively With the Reporting Residents: The handbook calls for restorative practices across community interactions. Thank the neighbors for coming forward, update them that you're addressing it, and check back in — their experience of feeling unsafe in their own community matters."
+      "Safety Is the Underlying Issue: An unauthorized long-term guest creates real safety and security concerns for the community. The handbook's safety pillar includes ensuring residents know who is in their shared spaces. This isn't a technicality — it affects everyone on the floor.",
+      "CLAM Standards Apply Here: Guest policies are part of the Community Living At Michigan (CLAM) standards that every resident agreed to when signing their housing contract. The handbook says to 'be consistent in applying policies, procedures, and expectations' — apply them clearly and without making it personal.",
+      "Assume Goodwill, But Hold the Standard: The handbook asks staff to 'assume goodwill' in interactions. The resident may genuinely not realize the impact. Lead with curiosity rather than accusation, but be clear and direct that the situation must be resolved.",
+      "Document the Reports and the 24-Hour Response: The handbook expects staff to respond to resident concerns within 24 business hours and to 'keep accurate, up-to-date records' of incidents and communications. Document both email reports, your conversation with the resident, and the outcome — this record supports a conduct referral if the situation continues.",
+      "Engage Restoratively With the Reporting Residents: The handbook calls for restorative practices across community interactions. Thank the neighbors for coming forward, let them know it's being addressed, and follow up. Their discomfort in their own home matters."
     ]
   },
 
@@ -916,11 +916,11 @@ const SCENARIOS = [
     text: "An RA brings it to your attention that a resident hasn't left their room in five days following the death of a family member. Their roommate says they've stopped showering and barely eat. The resident has declined all check-ins from the RA and says they just want to be left alone.",
     roles: [{ label: "Grieving Resident", desc: "Withdrawn, requests privacy" }, { label: "Roommate", desc: "Worried, doesn't know what to do" }, { label: "HD", desc: "Balancing autonomy and welfare" }],
     debrief: [
-      "🏛️ Well-Being Over Autonomy When Safety Is at Risk: The handbook states that ensuring 'the physical and emotional safety of residents' is central to the role. Respecting privacy is important, but declining to eat or shower for five days signals a welfare check is warranted.",
-      "📋 Know When to Escalate: The handbook says to 'recognize when you are not the right person for a task' and loop in a supervisor and campus counseling. Grief that has progressed to self-neglect requires professional mental health support — not just a knock on the door.",
-      "🤝 Lead With Warmth, Not Urgency: The handbook calls for 'genuine care, empathy and reflection.' Forcing interaction will backfire. A handwritten note under the door, a care package, or a brief non-intrusive check-in communicates care without feeling like surveillance.",
-      "📝 Document the Welfare Concern: The handbook requires 'accurate, up-to-date records.' Document the RA's report, dates of observed changes, your actions, and who you've looped in. If the situation deteriorates, this record is critical for a welfare check through DPSS.",
-      "🌱 Support the Roommate: The handbook's Belonging philosophy includes supporting everyone in the community. The roommate is carrying a lot by witnessing this. Connect them to support resources and acknowledge that their concern is exactly what community looks like."
+      "Well-Being Over Autonomy When Safety Is at Risk: The handbook states that ensuring 'the physical and emotional safety of residents' is central to the role. Respecting privacy matters, but declining to eat or shower for five days signals a welfare check is warranted — not optional.",
+      "Know When to Escalate — and Loop In Your Supervisor: The handbook says to 'recognize when you are not the right person for a task' and to 'communicate proactively with your supervisor without having to be prompted.' Grief that has progressed to self-neglect requires professional mental health support. Use Partner Office Hours to consult with campus counseling on next steps.",
+      "Lead With Warmth, Not Urgency: The handbook calls for 'genuine care, empathy and reflection.' Forcing interaction will backfire. A handwritten note, a care package, or a brief non-intrusive check-in communicates care without feeling like surveillance.",
+      "Document the Welfare Concern: The handbook requires 'accurate, up-to-date records.' Document the RA's report, dates of observed changes, your actions, and everyone you've looped in. If the situation deteriorates, this record is critical for a DPSS welfare check.",
+      "Support the Roommate Too: The handbook's Belonging philosophy includes supporting everyone in the community. The roommate is carrying a heavy load by witnessing this. Connect them to support resources and acknowledge that their concern is exactly what community looks like."
     ]
   },
 
@@ -934,11 +934,11 @@ const SCENARIOS = [
     text: "During a casual hallway conversation, a resident discloses to you that another resident on the floor 'did something' to them at a party two weekends ago that made them feel unsafe. They are not using the words 'assault' but their description clearly implies non-consensual contact. They beg you not to tell anyone.",
     roles: [{ label: "Disclosing Resident", desc: "Scared, sworn you to secrecy" }, { label: "HD", desc: "Mandatory reporter" }],
     debrief: [
-      "🏛️ You Are a Mandatory Reporter: The handbook requires staff to 'comply with all legal reporting obligations' and to 'become familiar with university policies including Title IX and VI.' A Title IX disclosure triggers mandatory reporting obligations that cannot be waived at the resident's request.",
-      "📋 Be Honest About Your Obligations: The handbook says to 'maintain professional communication' and act with integrity. You must tell the resident clearly but compassionately that you are required to report — not because you want to override their choice, but because the law requires it.",
-      "🤝 Lead With Compassion, Always: The handbook's core value of Compassion requires 'care for others through words and actions.' Thank them for trusting you. Sit with them. Tell them the report is not a punishment — it is a pathway to support and safety for them and others.",
-      "📝 Report Promptly Through Proper Channels: The handbook is explicit — 'report potential violations or concerns using the appropriate university channels' and 'communicate promptly especially when urgent matters arise.' Contact your supervisor and the Title IX office as soon as possible.",
-      "🌱 Connect to Survivor Resources: The handbook's core work includes 'Health and Well-Being Care and Education' and ensuring students have access to resources. Walk the resident through available confidential advocacy resources, SAPAC, and counseling — reporting doesn't mean they lose control of their story."
+      "You Are a Mandatory Reporter: The handbook requires staff to 'comply with all legal reporting obligations' and to 'become familiar with university policies including Title IX and VI' under the Understand Reporting Responsibilities section. A Title IX disclosure triggers mandatory reporting obligations that cannot be waived at the resident's request.",
+      "Be Honest About Your Obligations: The handbook says to 'maintain professional communication' and act with integrity. Tell the resident clearly but compassionately that you are required to report — not to override their choice, but because the law requires it of you.",
+      "Lead With Compassion, Always: The handbook's core value of Compassion requires 'care for others through words and actions.' Thank them for trusting you. Sit with them. Make clear that reporting is not a punishment — it is a pathway to support and safety.",
+      "Report Promptly Through the Right Channels: The handbook says to 'communicate promptly especially when urgent matters arise' and to 'report potential violations using the appropriate university channels.' Contact your supervisor and the Title IX office as soon as possible — timeliness matters here.",
+      "Connect to Survivor Resources: The handbook's core work includes 'Health and Well-Being Care and Education' and ensuring students have access to resources. Walk the resident through SAPAC, confidential advocacy services, and counseling. Reporting doesn't mean they lose control of their story."
     ]
   },
 
@@ -952,11 +952,11 @@ const SCENARIOS = [
     text: "While doing rounds, you smell marijuana coming strongly from under a resident's door. It's not the first time — this is the third incident in two weeks involving the same room. When you knock, the resident answers with glassy eyes and insists the smell is 'incense.'",
     roles: [{ label: "Resident", desc: "Deflecting, minimizing" }, { label: "HD", desc: "Consistent policy enforcer" }],
     debrief: [
-      "🏛️ Address Policy Violations When You See Them: The handbook states that 'full-time staff should respond to student concerns and conflicts in ways that balance care, accountability, and protocol, while also addressing policy violations when they see them.' Smelling marijuana and moving on is not an option.",
-      "📋 Be Consistent: The handbook explicitly says staff must 'be consistent in applying policies, procedures, and expectations.' Three incidents in two weeks with no consequence sends the wrong message to the resident and the community.",
-      "🤝 Stay Calm and Professional: The handbook expects staff to 'maintain a positive and professional demeanor.' Don't let the resident's deflection frustrate you into an unprofessional interaction. State what you observed factually and explain the next steps clearly.",
-      "📝 Document the Pattern: Per handbook record-keeping expectations, document this incident alongside the prior two. A documented pattern is what enables escalation to a formal conduct process. Each incident on its own may seem minor; together they tell a story.",
-      "🌱 Consider What's Underneath: The handbook calls for staff to 'question assumptions and thoughtfully address broader contexts.' Frequent use may signal stress, mental health struggles, or other challenges. A referral to counseling alongside the conduct process addresses the whole person."
+      "Address Policy Violations When You See Them: The handbook states that 'full-time staff should respond to student concerns and conflicts in ways that balance care, accountability, and protocol, while also addressing policy violations when they see them.' Smelling marijuana and walking away is not a neutral choice.",
+      "Be Consistent — Every Time: The handbook explicitly says staff must 'be consistent in applying policies, procedures, and expectations.' Three incidents in two weeks with no consequence sends the wrong message. The handbook also reminds staff that 'even if you're not working, it's important to remember that we represent the work.'",
+      "Maintain a Positive and Professional Demeanor: The handbook's Workplace Ethics section expects staff to 'maintain a positive and professional demeanor especially in interactions with students.' Don't let the resident's deflection pull you into an unprofessional exchange. State what you observed, explain the next steps, and stay calm.",
+      "Document the Pattern: Per the handbook's record-keeping expectations, document this incident alongside the prior two. Each one on its own may seem minor — together they build the documented pattern needed to support a formal conduct referral.",
+      "Consider What's Underneath: The handbook calls for staff to 'question assumptions and thoughtfully address broader contexts and systemic factors.' Frequent use may signal stress or mental health struggles. A counseling referral alongside the conduct process addresses the whole person."
     ]
   },
 
@@ -967,14 +967,14 @@ const SCENARIOS = [
     icon: "⚠️",
     difficulty: 2,
     title: "Domestic Situation",
-    text: "At 11 PM, a resident calls your on-call number crying. She says her boyfriend (a non-resident) came to visit, they argued, and he grabbed her arm hard enough to leave a mark. He has now left the building. She doesn't want to call the police and is asking you just to 'make sure he can't get back in.'",
+    text: "At 11 PM, a resident calls your on-call number crying. She says her boyfriend (a non-resident) came to visit, they argued, and he grabbed her arm hard enough to leave a mark. He has now left the building. She doesn't want to call anyone and is asking you just to 'make sure he can't get back in.' She's specifically asking you not to involve DPSS.",
     roles: [{ label: "Resident", desc: "Shaken, resistant to formal reporting" }, { label: "HD", desc: "On-call, navigating legal obligations" }],
     debrief: [
-      "🏛️ Physical Safety is the First Priority: The handbook's safety pillar requires staff to ensure residents' physical safety 'to the best of our ability.' A resident with a visible injury from another person requires immediate safety planning — and DPSS notification.",
-      "📋 Legal Reporting Obligations Apply: The handbook requires 'complying with all legal reporting obligations.' Depending on your institution's policies, a physical injury from a domestic incident may trigger mandatory reporting regardless of the resident's wishes. Know your policy and consult your supervisor immediately.",
-      "🤝 Lead With Compassion and Let Her Lead the Narrative: The handbook asks staff to 'care for others through words and actions.' Do not pressure or rush her. Listen, validate her experience, and explain your obligations honestly. Her trust in you depends on how you handle this moment.",
-      "📝 Document Everything: Document the call time, what was reported, physical observations (the mark on her arm), who you contacted, and every action taken. Per the handbook, this record is critical — for a conduct process, a potential no-contact order, and her ongoing safety.",
-      "🌱 Connect to Advocacy Resources: The handbook's core work includes ensuring 'students have access to resources that meet their essential needs.' Connect her to campus advocacy services, counseling, and SAPAC. Trespassing the ex from the building is a step — but her ongoing wellbeing requires more."
+      "Physical Safety Comes First — and DPSS Is the Call: The handbook's safety pillar requires staff to ensure residents' physical safety 'to the best of our ability' and to 'call DPSS immediately when appropriate.' A resident with a visible injury from another person requires immediate safety planning. Her request not to involve DPSS does not override your obligations.",
+      "Legal Reporting Obligations Apply: The handbook requires 'complying with all legal reporting obligations.' A physical injury from a domestic incident may trigger mandatory reporting regardless of the resident's wishes. Know your policy and consult your supervisor immediately.",
+      "Lead With Compassion and Let Her Lead the Narrative: The handbook asks staff to 'care for others through words and actions.' Do not pressure or rush her. Listen, validate her experience, and explain your obligations honestly. How you handle this moment determines whether she trusts the institution going forward.",
+      "Document Everything: Document the call time, what was reported, physical observations (the mark on her arm), who you contacted, and every action taken. Per the handbook, this record is critical for a conduct process, a potential no-contact order, and her ongoing safety.",
+      "Connect to Advocacy Resources: The handbook's core work includes ensuring 'students have access to resources that meet their essential needs.' Connect her to campus advocacy services, SAPAC, and counseling. Getting him trespassed from the building is one step — her ongoing wellbeing requires much more."
     ]
   },
 
@@ -985,14 +985,14 @@ const SCENARIOS = [
     icon: "📜",
     difficulty: 1,
     title: "RA Professional Boundary Concern",
-    text: "A resident approaches you privately to say they think their RA has developed a romantic interest in them. The RA has been texting them from their personal phone late at night and asked them to hang out off-campus. The resident isn't sure if it's 'a big deal' but feels uncomfortable.",
+    text: "A resident approaches you privately to say their RA has been texting them from a personal phone number late at night and recently asked them to hang out off-campus. The resident isn't sure if it's 'a big deal' but feels uncomfortable and wanted you to know.",
     roles: [{ label: "Resident", desc: "Uncomfortable, unsure if it's serious" }, { label: "HD", desc: "Supervisor of the RA" }],
     debrief: [
-      "🏛️ Professional Boundaries Are a Core Expectation: The handbook is explicit — staff must 'maintain clear distinctions between professional and social interactions' and 'avoid situations that could create conflicts of interest or the appearance of favoritism.' An RA texting a supervisee from their personal phone at night is a clear boundary violation.",
-      "📋 Personal Communication Channels Are Prohibited: The handbook states that 'the use of personal forms of communication between full-time staff and student leaders and ResStaff is prohibited' without explicit approval. This same standard applies to RA–resident relationships.",
-      "🤝 Support the Resident First: The handbook calls for 'genuine care, empathy and reflection.' Validate that the resident was right to come to you, ensure they feel safe in their community, and explain clearly how you will handle this without putting them in the middle.",
-      "📝 Document and Escalate to Your Supervisor: Per the handbook, concerns about a colleague's conduct should be addressed with a supervisor. Document what the resident disclosed — dates, nature of communications, what was said — and bring it to your AD promptly.",
-      "🌱 Address It With the RA Using a Growth Mindset: The handbook says staff should 'acknowledge mistakes and use them as opportunities for learning and improvement.' Approach the RA conversation with clarity and without assumption, but be direct that the behavior must stop and why it matters."
+      "Professional Boundaries Are Explicitly Required: The handbook's 'Cultivate the Practice of Setting and Maintaining Boundaries' section requires staff to 'maintain clear distinctions between professional and social interactions' and 'avoid situations that could create conflicts of interest or the appearance of favoritism.'",
+      "Personal Communication Channels Are Prohibited: The handbook is direct — 'the use of personal forms of communication between full-time staff and student leaders and ResStaff is prohibited' without explicit approval. This same prohibition applies to RA–resident communication. Texting from a personal phone is not a gray area.",
+      "Support the Resident First: The handbook calls for 'genuine care, empathy and reflection.' Validate that the resident was right to come to you. Reassure them that you will handle this without putting them in the middle, and make sure they feel safe in their community.",
+      "Document and Bring It to Your AD: Per the handbook, performance and conduct concerns about student staff should be escalated to your Associate Director — not handled alone. Document what the resident disclosed (dates, nature of communications, what was said) and bring it to your AD promptly.",
+      "Address It With the RA Using a Growth Mindset: The handbook says staff should 'acknowledge mistakes and use them as opportunities for learning and improvement.' Approach the RA conversation with clarity and without assumption. Be direct about why the behavior must stop and what the handbook requires."
     ]
   },
 
@@ -1003,14 +1003,14 @@ const SCENARIOS = [
     icon: "🚒",
     difficulty: 3,
     title: "Active Weather Emergency",
-    text: "A tornado warning is issued for your area at 9 PM on a Thursday. Students are scattered across the building — some in rooms, some in lounges, some unaccounted for. A group of residents is ignoring your instruction to move to the basement, insisting it's 'just a warning, not a watch.'",
-    roles: [{ label: "Non-compliant Residents", desc: "Dismissive of the warning" }, { label: "Cooperative Residents", desc: "Following instructions, looking to HD" }, { label: "HD", desc: "Emergency coordinator" }],
+    text: "A tornado warning is issued at 9 PM on a Thursday. Students are scattered across the building. A group of residents is ignoring your instruction to move to the basement, insisting it's 'just a warning, not a watch' — and their casual dismissal is starting to influence others nearby.",
+    roles: [{ label: "Non-compliant Residents", desc: "Dismissive, influencing others" }, { label: "Cooperative Residents", desc: "Following instructions, looking to HD" }, { label: "HD", desc: "Emergency coordinator" }],
     debrief: [
-      "🏛️ Safety Overrides Everything: The handbook is unambiguous — ensuring 'the physical and emotional safety of our residents' is at the center of the role. A tornado warning is a life safety event. Non-compliance is not a debate to have — it is a directive to enforce.",
-      "📋 Know Your Emergency Protocols: The handbook expects staff to 'create and follow structured plans for major processes' and 'anticipate potential challenges and prepare contingencies.' Emergency weather protocols should be reviewed before the school year — not during the event.",
-      "🤝 Calm Authority Is the Right Tone: The handbook's core value of Adaptability asks staff to be 'responsive to the needs of our students through solutions-oriented approaches.' Panicking or arguing escalates the situation. Be clear, be firm, and give residents one directive at a time.",
-      "📝 Account for All Residents and Document: The handbook expects 'detail-oriented' work and accurate record-keeping. Know who is in the building, where they are, and account for them all in the shelter location. Document any residents who refused to comply — this matters for follow-up.",
-      "🌱 Debrief With the Community Afterward: The handbook's Developing Community philosophy calls for 'implementing approaches to actively listen to and address the unique needs within each community.' After the warning passes, hold a brief community conversation about why emergency protocols matter for everyone's safety."
+      "Safety Overrides Everything: The handbook is unambiguous — ensuring 'the physical and emotional safety of our residents' is at the center of the role. A tornado warning is a life safety event. Non-compliance is not a debate — it is a directive to enforce calmly and firmly.",
+      "Know Your Emergency Protocols Before the Emergency: Under Administration and Organizational Skills, the handbook calls for staff to 'create and follow structured plans for major processes' and 'anticipate potential challenges and prepare contingencies.' Emergency weather protocols must be internalized before they're needed — not read for the first time in the moment.",
+      "Adaptability Means Solutions-Oriented, Not Reactive: The handbook's core value of Adaptability asks staff to be 'responsive to the needs of our students through solutions-oriented approaches.' Panicking or arguing escalates the situation. Give residents one clear directive at a time and project calm authority.",
+      "Account for Every Resident — Use Your Roster: The handbook expects 'detail-oriented' work and accurate record-keeping. Know who is in the building, account for every resident in the shelter location, and document anyone who refused to comply. Your weekly community walks exist partly so you know your community well enough to do this.",
+      "Debrief With the Community Afterward: The handbook's Developing Community philosophy calls for 'implementing approaches to actively listen to and address the unique needs within each community.' After the warning passes, hold a brief community conversation about why emergency protocols exist and why individual choices affect everyone."
     ]
   },
 
@@ -1021,14 +1021,14 @@ const SCENARIOS = [
     icon: "🧠",
     difficulty: 1,
     title: "First-Year Homesickness Spiral",
-    text: "It's week three of fall semester. An RA tells you a first-year resident has been crying daily, calling their parents for hours at night, skipping classes, and told the RA they 'made a huge mistake coming here' and want to go home. The student's grades are already suffering.",
+    text: "It's week three of fall semester. An RA raises a concern during your Monday Night Meeting — a first-year resident has been crying daily, calling their parents for hours at night, skipping classes, and told the RA they 'made a huge mistake coming here.' The student's grades are already suffering.",
     roles: [{ label: "Homesick Resident", desc: "Overwhelmed, withdrawn" }, { label: "RA", desc: "Unsure if this is serious or normal" }, { label: "HD", desc: "Coaching the RA and supporting the student" }],
     debrief: [
-      "🏛️ Belonging Is a Core Pillar of Our Work: The handbook says M Housing is 'dedicated to creating an environment where every individual feels supported and connected.' A first-year student who feels they made a mistake coming here is exactly who this pillar was written for.",
-      "📋 Coach Your RA on the Right Response: The handbook says staff should 'support student staff in applying resident-centered practices by helping them consider resident needs when making decisions.' Guide the RA — this is normal, but it's also a real moment for intervention if left unaddressed.",
-      "🤝 Normalize and Connect: The handbook's Compassion value and Developing Community philosophy call for 'fostering meaningful connections with each resident.' Acknowledge that adjustment is hard. Invite the student to a low-pressure community event. A single genuine connection can shift everything.",
-      "📝 Keep a Watchful Eye and Document: The handbook expects staff to 'keep accurate, up-to-date records.' Note the RA's report, the pattern of behaviors, and the academic concern. If the student's situation escalates to a withdrawal conversation, this record is part of a holistic picture.",
-      "🌱 Connect to the Ecosystem of Support: The handbook's Student Life core work includes 'Leadership Education & Self-Discovery' and 'Student Intervention, Support & Advocacy.' This student needs academic advising, counseling, and peer connection — not just a sympathetic knock on the door."
+      "Belonging Is a Named Core Philosophy of ResEd: The handbook identifies Belonging as one of three core ResEd philosophies, dedicated to 'creating an environment where every individual feels supported and connected.' A first-year who feels they made a mistake coming here is exactly who that philosophy was written for.",
+      "Use This as a Coaching Moment in Your Supervision: The handbook says staff should 'support student staff in applying resident-centered practices by helping them consider resident needs when making decisions.' Your RA brought this to MNM because they trust you — coach them on what a good check-in looks like and what resources to offer.",
+      "Normalize the Experience and Create a Connection: The handbook's Developing Community philosophy calls for 'organizing opportunities for residents to meet and learn about one another.' Adjustment is hard. Invite the student into something low-pressure. One genuine connection to the community can shift everything.",
+      "Document the Pattern and Keep Watch: The handbook expects staff to 'keep accurate, up-to-date records.' Note the RA's report, the pattern of behaviors, and the academic concern. If the situation escalates toward a withdrawal conversation, this documentation becomes part of a holistic picture.",
+      "Connect to the Full Ecosystem of Support: The handbook's Student Life core work includes 'Leadership Education and Self-Discovery' and 'Student Intervention, Support and Advocacy.' This student needs academic advising, counseling, and peer connection — not just a sympathetic knock on the door."
     ]
   }
 ];
